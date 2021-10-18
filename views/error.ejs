@@ -1,3 +1,16 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<%- include  partials/header.ejs %>
+
+<%- include  partials/main_nav.ejs %>
+
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+    <% if (error.status == '404') {%>
+     <img class="logo" src="./Assets/images/404.png" alt="404 error">
+    <% } else { %>
+        <h1><%= message %></h1>
+        <h2><%= error.status %></h2>
+    <% } %>
+</div>
+
+<%- include  partials/bottom_nav.ejs %>
+
+<%- include  partials/footer.ejs %>
