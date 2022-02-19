@@ -13,6 +13,9 @@ Date: 20/10/2021
  var app = require('./app');
  var debug = require('debug')('expressportfolio:server');
  var http = require('http');
+ const dotenv = require('dotenv');
+ dotenv.config();
+
  
  /**
   * Get port from environment and store in Express.

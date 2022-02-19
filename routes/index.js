@@ -6,6 +6,7 @@ Date: 20/10/2021
 
 var express = require('express');
 var router = express.Router();
+let contactController = require('../controllers/contact')
 
 /* GET Home page. */
 router.get('/', function(req, res, next) {
@@ -36,5 +37,9 @@ router.get('/services', function(req, res, next) {
 router.get('/contact', function(req, res, next) {
   res.render('index', { title: 'Contact' , page: 'contact' });
 });
+
+/* POST Contact page. */
+router.post('/contact',contactController.processContactPage)
+
 
 module.exports = router;
